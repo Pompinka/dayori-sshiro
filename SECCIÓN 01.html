@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAYORI</title>
+    <style>
+         :root {
+            --bg-color: #ECECE4;
+            --text-color: #1a1a1a;
+            --accent-blue: #708ea0; 
+            --glitch-color: #d1d1d1;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        .newspaper-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid var(--text-color);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            border-bottom: 4px solid #D10000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .side-menu {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            border-left: 2px solid #D10000;
+            padding-left: 10px;
+        }
+
+        .side-menu a {
+            text-decoration: none;
+            color: #444;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            padding: 6px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+
+        .side-menu a::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 0;
+            height: 1px;
+            background-color: #D10000;
+            transition: width 0.3s ease;
+        }
+
+        .side-menu a:hover {
+            color: #D10000;
+            transform: translateX(5px);
+        }
+
+        .side-menu a:hover::before {
+            width: 8px;
+        }
+
+        .logo-area h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .japanese-sub {
+            writing-mode: vertical-rl;
+            color: #D10000;
+            font-size: 0.8rem;
+            height: 100px;
+            border-left: 1px solid #D10000;
+            padding-left: 5px;
+        }
+
+        .marea-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(112, 142, 160, 0.05) 50%, transparent 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        article {
+            border-right: 1px solid #D10000;
+            padding-right: 20px;
+        }
+
+        .sidebar {
+            font-size: 0.9rem;
+        }
+
+         h1 {
+            color: #D10000;
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #D10000;
+            color: var(--bg-color);
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            background-color: var(--bg-color);
+            color: #061504;
+            display: inline-block;
+            padding: 0 5px;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+
+        .caption {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .kanji-float {
+            position: absolute;
+            color: rgba(0,0,0,0.1);
+            font-size: 5rem;
+            z-index: -1;
+            bottom: 10%;
+            right: 5%;
+        }
+
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid #D10000;
+            padding-top: 10px;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="marea-overlay"></div>
+
+    <div class="newspaper-container">
+        <header>
+            <div class="logo-area">
+                <h1>DAYORI SHIRO</h1>
+                <p>TOMO. 01 / ABRIL — 2026</p>
+            </div>
+            <div class="japanese-sub">
+                あなたの声がニュースになる場所
+            </div>
+        </header>
+
+        <div class="main-content">
+            <article>
+                <h2>MOTION PICTURE: HOUSE KID A MNESIA</h2>
+
+                <video src="RADIOHEAD.mp4" width="100%"  height= "360px" controls loop muted poster="INICIO.jpeg"></video>
+                <p class="caption">VIDEO (TT): @perfect._blue_          - DAYORI SHIRO</p>
+
+                <h3><p>¿QUÉ ES MONTION PICTURE HOUSE?</p></h3>
+                <p>Motion Picture House es una instalación audiovisual y galería de arte a gran escala creado por Thom Yorke y Stanley Donwood durante las sesiones de grabación de Kid A y Amnesiac.</p>
+
+                <p>La temática consiste en una película de 75 minutos que fusiona la arquitectura de la casa con el mundo y el concepto de una nueva mezcla extraída de las multipistas dentro de KID A MNESIA.</p>
+
+                <h3><p>¿LA EXPERIENCIA VENDRÁ A MÉXICO?</h3></p>
+                <p>Si, Kid A Mnesia en CDMX es Maravilla Studios, un espacio ubicado en Sabino 310, en la colonia Atlampa.</p>
+
+                <p>La exhibición estará abierta del 27 de octubre al 15 de noviembre de 2026</p>
+                
+            </article>
+
+            <aside class="sidebar">
+
+                <h3>SECCIONES</h3>
+
+            <nav class="side-menu">
+                <a href="SHIRO.html">INICIO</a>
+                <a href="SECCIÓN 01.html">RADIOHEAD</a>
+                <a href="SECCIÓN 02.html">BTS "ARIRANG"</a>
+                <a href="SECCIÓN 03.html">YE "BULLY"</a>
+                <a href="SECCIÓN 04.html">SPIDER-MAN: BRANDNEW DAY</a>
+                <a href="SECCIÓN 05.html">SPINOSAURUS</a>
+                <a href="SECCIÓN 07.html">REDES SOCIALES</a>
+                <a href="SECCIÓN 08.html">COMENTARIOS</a>
+            </nav>
+
+                <BR>
+                <h3>Kid A (2000)</h3>
+                <div class="dino-card">
+                    Representa una de las etapas más experimentales del grupo, puesto que este álbum es un poco más difícil de digerir. La incorporación de sintetizadores, estructuras irregulares y ambientes minimalistas amplió los límites del género.<br><br>
+
+                    <h4>Motion Picture Soundtrack</h4><br>
+                    Contiene un cierre introspectivo que combina elementos orquestales con una producción contenida, suena como una despedida que no termina de decirse.<br><br><img src = "08.jpeg" width="100%"  height= "250px"> 
+                    <p class="caption">IMAGEN (P): @strikeres12          - DAYORI SHIRO</p>
+
+                    <h4>In Limbo</h4><br>
+                    Ejemplo de la exploración sonora del álbum, con énfasis en la textura y la sensación de desorientación musical, logrando transmitir la sensación de estar suspendido entre lo que ya no eres y lo que todavía no entiendes.<br><br><img src = "05.jpeg" width="100%"  height= "250px"> 
+                    <p class="caption">IMAGEN (P): @disallegro          - DAYORI SHIRO</p>
+
+                </div>
+
+            </aside>
+        </div>
+
+        <div class="kanji-float">新聞</div>
+
+        <footer>
+            <span>BY: @l206y   COMPUTIN EDITIONS   © 2026 </span>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAYORI</title>
+    <style>
+         :root {
+            --bg-color: #ECECE4;
+            --text-color: #1a1a1a;
+            --accent-blue: #708ea0; 
+            --glitch-color: #d1d1d1;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        .newspaper-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid var(--text-color);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            border-bottom: 4px solid #D10000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .side-menu {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            border-left: 2px solid #D10000;
+            padding-left: 10px;
+        }
+
+        .side-menu a {
+            text-decoration: none;
+            color: #444;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            padding: 6px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+
+        .side-menu a::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 0;
+            height: 1px;
+            background-color: #D10000;
+            transition: width 0.3s ease;
+        }
+
+        .side-menu a:hover {
+            color: #D10000;
+            transform: translateX(5px);
+        }
+
+        .side-menu a:hover::before {
+            width: 8px;
+        }
+
+        .logo-area h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .japanese-sub {
+            writing-mode: vertical-rl;
+            color: #D10000;
+            font-size: 0.8rem;
+            height: 100px;
+            border-left: 1px solid #D10000;
+            padding-left: 5px;
+        }
+
+        .marea-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(112, 142, 160, 0.05) 50%, transparent 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        article {
+            border-right: 1px solid #D10000;
+            padding-right: 20px;
+        }
+
+        .sidebar {
+            font-size: 0.9rem;
+        }
+
+         h1 {
+            color: #D10000;
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #D10000;
+            color: var(--bg-color);
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            background-color: var(--bg-color);
+            color: #061504;
+            display: inline-block;
+            padding: 0 5px;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+
+        .caption {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .kanji-float {
+            position: absolute;
+            color: rgba(0,0,0,0.1);
+            font-size: 5rem;
+            z-index: -1;
+            bottom: 10%;
+            right: 5%;
+        }
+
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid #D10000;
+            padding-top: 10px;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="marea-overlay"></div>
+
+    <div class="newspaper-container">
+        <header>
+
+
+
+            <div class="logo-area">
+                <h1>DAYORI SHIRO</h1>
+                <p>TOMO. 01 / ABRIL — 2026</p>
+            </div>
+            <div class="japanese-sub">
+                あなたの声がニュースになる場所
+            </div>
+
+        </header>
+
+        <div class="main-content">
+
+            <article>
+                <h2>WHO IS SHIRO?</h2>
+
+                <img src = "SHIRO.jpeg" width="100%"  height= "350px"> 
+                <p class="caption">IMAGEN: @kiwikikawi          - DAYORI SHIRO</p>
+
+                <p>Shiro es la mascota de nuestro periódico: una ardilla japonesa, creada por @kiwikikawi (Vicky)</p>
+
+                <p>Por ahora existe solo en formato digital, con la intención de convertirse en peluche y eventualmente salir a las calles para grabar y cubrir noticias locales.</p>
+
+                <img src = "SHIRO 02.jpeg" width="100%"  height= "350px"> 
+                <p class="caption">IMAGEN: @kiwikikawi          - DAYORI SHIRO</p>
+
+                <p>Este es el primer tomo, así que aún no tiene experiencia ni presencia fuera de la pantalla, todavía no reporta ni recorre el entorno, pero está en proceso.</p>
+
+                <p>Con el tiempo, se espera que encuentre su lugar dentro de cada edición y comience a cumplir con la idea central de nuestro proyecto: “Donde tu voz se hace noticia”.</p>
+            </article>
+
+            <aside class="sidebar">
+
+                <h3>SECCIONES:</h3>
+
+            <nav class="side-menu">
+                <a href="SHIRO.html">INICIO</a>
+                <a href="SECCIÓN 01.html">RADIOHEAD</a>
+                <a href="SECCIÓN 02.html">BTS "ARIRANG"</a>
+                <a href="SECCIÓN 03.html">YE "BULLY"</a>
+                <a href="SECCIÓN 04.html">SPIDER-MAN: BRANDNEW DAY</a>
+                <a href="SECCIÓN 05.html">SPINOSAURUS</a>
+                <a href="SECCIÓN 07.html">REDES SOCIALES</a>
+                <a href="SECCIÓN 08.html">COMENTARIOS</a>
+            </nav>
+                  <BR>
+                <div style="border: 1px dashed black; padding: 10px; margin-top: 20px;">
+                    <h3>DAYORI - (だより / 便り)</h3>
+                    <p>Palabra de origen japonés que significa “noticias” o “mensajes”</p>
+                    <p>Tradicionalmente se usaba para referirse a cartas o comunicados que llevaban información importante de un lugar a otro.</p><br>
+                    <p>Para nosotros representa la idea de mantener informada a la comunidad, acercando historias, acontecimientos y voces que merecen ser escuchadas.</p>
+                </div>
+
+            </aside>
+        </div>
+
+        <div class="kanji-float">新聞</div>
+
+        <footer>
+            <span>COMPUTIN EDITIONS   © 2026</span>
+        </footer>
+    </div>
+
+</body>
+</html>
